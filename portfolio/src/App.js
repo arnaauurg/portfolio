@@ -11,7 +11,7 @@ import LandingPage from './Home/LandingPage';
 import Interests from './Interests/MyIntersets';
 import AboutMe from './About/AboutMe';
 import Contact from './Contact Me/Contact';
-
+import Loader from './Loader';
 
 
 
@@ -26,3 +26,4 @@ export default function App(){
         </BreakpointProvider>
     )
 }
+

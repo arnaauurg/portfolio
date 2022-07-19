@@ -6,8 +6,6 @@ import { useGLTF, Float, useTexture } from "@react-three/drei";
 
 //fragmento de letras blender UX
 
-const name = (type) => `Lava_005_${type}.jpg`; //para las texturas 
-
 
 export default function UX({ ...props }) {
   const group = useRef();
