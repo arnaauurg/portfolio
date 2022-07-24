@@ -8,7 +8,7 @@ export default function Character({ ...props }) {
     <group ref={group} {...props} dispose={null}>
       <group rotation={[-Math.PI / 2, 0, 0]} scale={1.53389943}>
         <group rotation={[Math.PI / 2, 0, 0]}>
-          <group scale={0.11}>
+          <group scale={0.14}>
             <mesh
               castShadow
               receiveShadow

@@ -1,8 +1,8 @@
 
 import React from 'react';
-import { Suspense, useRef, useContext } from 'react'
-import { Canvas, useFrame } from '@react-three/fiber'
-import { Backdrop, Float, OrbitControls, Stage } from '@react-three/drei';
+import { Suspense, useState} from 'react'
+import {Canvas, useFrame} from '@react-three/fiber'
+import {Float, OrbitControls, Stage, useCursor } from '@react-three/drei';
 
 import Loader from '../Loader';
 import Page from '../Page';
@@ -14,34 +14,66 @@ import Arnau from './Arnau';
 import Character from './Character';
 import Smoke from './Smoke';
 import Gradient from './Gradient';
-
-//import Background from './Background'; css?? hay que passarlo por threejs scene
+import Fragments from './Arnau';
 
 //Parte modular para constuir la escena principal HOME
 
-export default function LandingPage() {
-    return (
-        <Page >
-          <Canvas resize={1} dpr={window.devicePixelRatio} camera={{position: [25, 10, 30], fov:45, zoom: 1, near:5, far: 1000}}  > 
-              <Suspense fallback={<Loader />}>       
+function Letters(){
+
+  const [click, setClicked] = useState(false)
+  
+  return(
+    <group>
+      <Fragments visible={click}  onClick={() => setClicked(true)} />  
+    </group>
+  )
+}
+
+
+
+
+export default function MainScene() {
+ 
+  return (
+      <Page >
+        <Canvas dpr={[1,2]} resize={1} orthographic camera={{ zoom: 10 }}  > 
+            <Suspense fallback={<Loader />}>       
               <Stage>
-                <Float floatingRange={0.75}>
+                <Float floatingRange={0.5}>
                   <Character position={[-25, 2, 10]}  />
-                </Float>
-                <OrbitControls />
-                <Arnau  />
-                <Gradient  scale={5} position={[0, 0, 0]}  />
-                <Smoke scale={0.20}  position={[-23, -5, 7]} />
+                </Float>                        
+                <Letters />                  
+                <Gradient attach="background"  scale={[5]} position={[0, 10, -20]}  />
+                <Smoke scale={0.25}  position={[-23, -5, 7]} />
                 </Stage>
-              </Suspense>
-            </Canvas>
-        </Page>
-    );
-  }
+            </Suspense>
+          </Canvas>
+      </Page>
+  );
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
   //<UX position={[-10, 15, 45]} rotation-y={[ Math.PI /2]} />
-/*
+/* IGNORAR!!
       <Arnau  scale={8} position={[-80, 10, 50]}  rotation-y={[ Math.PI /2]} />
                 <Cloud scale={8} position={[5, -30, 15]} rotation-y={[ Math.PI /2]}/>
                 <Cloud scale={8} position={[15, -40, -15]} rotation-y={[ Math.PI /2]}/>
