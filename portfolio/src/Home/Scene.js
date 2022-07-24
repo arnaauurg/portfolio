@@ -1,49 +1,73 @@
 
 import React from 'react';
 import { Suspense, useState} from 'react'
-import {Canvas, useFrame} from '@react-three/fiber'
-import {Float, OrbitControls, Stage, useCursor } from '@react-three/drei';
+import {Canvas, useFrame, useThree} from '@react-three/fiber'
+import {Float, OrbitControls, Stage, MeshReflectorMaterial, Plane } from '@react-three/drei';
 
 import Loader from '../Loader';
 import Page from '../Page';
-import Castle from './Castle';
-import Cloud from './Cloud';
-import Dragon from './Dragon';
-import UX from './UX';
 import Arnau from './Arnau';
 import Character from './Character';
 import Smoke from './Smoke';
 import Gradient from './Gradient';
 import Fragments from './Arnau';
+import { AmbientLight } from 'three';
 
-//Parte modular para constuir la escena principal HOME
+//Parte modular para constuir el landing principal
 
 function Letters(){
-
   const [click, setClicked] = useState(false)
-  
+
   return(
     <group>
-      <Fragments visible={click}  onClick={() => setClicked(true)} />  
+      <Fragments 
+        visible={click}  
+        onClick={() => setClicked(true)}
+        /* falta poner el hover de interacción- on pointer in-out */ 
+        />  
+    </group>
+  )
+}
+
+
+function Suelo(props) {
+  return (
+    <group {...props} scale={10} >
+      <Plane receiveShadow args={[50, 50, 36,36]} rotation-x={-Math.PI / 2} position={[0, -5, 0]} >
+      <MeshReflectorMaterial
+        blur={[300, 100]}
+        resolution={2048}
+        mixBlur={1}
+        mixStrength={40}
+        roughness={1}
+        depthScale={1.2}
+        minDepthThreshold={0.4}
+        maxDepthThreshold={1.4}
+        color="#101010"
+        metalness={0.5}
+          />
+      </Plane>
     </group>
   )
 }
 
 
 
-
+//<Gradient scale={[5]} position={[0, 10, -200]}  />
 export default function MainScene() {
- 
+  
+
   return (
       <Page >
-        <Canvas dpr={[1,2]} resize={1} orthographic camera={{ zoom: 10 }}  > 
-            <Suspense fallback={<Loader />}>       
-              <Stage>
+        <Canvas dpr={[1,2]} resize={1} orthographic camera={{fov:35, zoom: 11 }}  > 
+            <Suspense fallback={<Loader />}>
+              <OrbitControls />   
+              <Stage  adjustCamera intensity={0.3} environment="city"  >
                 <Float floatingRange={0.5}>
                   <Character position={[-25, 2, 10]}  />
-                </Float>                        
-                <Letters />                  
-                <Gradient attach="background"  scale={[5]} position={[0, 10, -20]}  />
+                </Float>                       
+                <Letters />
+                <Suelo />
                 <Smoke scale={0.25}  position={[-23, -5, 7]} />
                 </Stage>
             </Suspense>

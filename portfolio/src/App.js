@@ -11,7 +11,6 @@ import MainScene from './Home/Scene';
 import Interests from './Interests/MyIntersets';
 import AboutMe from './About/AboutMe';
 import Contact from './Contact Me/Contact';
-import Loader from './Loader';
 
 
 

@@ -17,6 +17,7 @@ function AnimatedRoutes() {
     <AnimatePresence >
       <Routes key={location.pathname} location={location}>
         <Route path="/"        element={<MainScene/>} />
+        <Route path="/home"        element={<MainScene/>} />
         <Route path="/about"     element={<AboutMe/>}   />
         <Route path="/interests" element={<Interests/>} />
         <Route path="/contact-me"   element={<Contact/>}   />

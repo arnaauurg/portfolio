@@ -1,7 +1,5 @@
 import React from "react";
-import { useRef, useState } from 'react'
-import { Canvas, useFrame } from '@react-three/fiber'
-import {GradientTexture } from '@react-three/drei'
+import {GradientTexture} from '@react-three/drei'
 
 
 export default function Gradient (){

@@ -69,7 +69,7 @@ function Loader() {
   return (
     <Html fullscreen={1} >
         <LoadingStyles>
-          <LoaderBox>{progress} % loaded</LoaderBox>
+          <LoaderBox>{progress.toFixed(2)} % loaded</LoaderBox>
         </LoadingStyles>
     </Html>
 
