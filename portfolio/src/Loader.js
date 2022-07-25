@@ -15,7 +15,8 @@ const LoadingStyles = styled.div`
   padding: 0;
   top: 0;
   z-index: 25;
-  background: #232946;
+  background: rgb(166, 214, 182);
+  background: linear-gradient(5deg, rgb(166, 214, 182) 0%, rgb(166, 214, 182) 100%);
 `
 
 const LoaderBox = styled.div`
@@ -27,7 +28,11 @@ const LoaderBox = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #ffffff;
+  text-decoration: none;
+  font-family: 'Anton', sans-serif;
+  font-size: 0.8vw;
+  letter-spacing: 0.1em;
+  color: #001C12;
 `
 
 const Fill = styled.div`
@@ -69,7 +74,7 @@ function Loader() {
   return (
     <Html fullscreen={1} >
         <LoadingStyles>
-          <LoaderBox>{progress.toFixed(2)} % loaded</LoaderBox>
+          <LoaderBox> Loading  {progress.toFixed(2)}%</LoaderBox>
         </LoadingStyles>
     </Html>
 

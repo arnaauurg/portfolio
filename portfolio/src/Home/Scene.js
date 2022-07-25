@@ -11,7 +11,6 @@ import Character from './Character';
 import Smoke from './Smoke';
 import Gradient from './Gradient';
 import Fragments from './Arnau';
-import { AmbientLight } from 'three';
 
 //Parte modular para constuir el landing principal
 
@@ -30,45 +29,25 @@ function Letters(){
 }
 
 
-function Suelo(props) {
-  return (
-    <group {...props} scale={10} >
-      <Plane receiveShadow args={[50, 50, 36,36]} rotation-x={-Math.PI / 2} position={[0, -5, 0]} >
-      <MeshReflectorMaterial
-        blur={[300, 100]}
-        resolution={2048}
-        mixBlur={1}
-        mixStrength={40}
-        roughness={1}
-        depthScale={1.2}
-        minDepthThreshold={0.4}
-        maxDepthThreshold={1.4}
-        color="#101010"
-        metalness={0.5}
-          />
-      </Plane>
-    </group>
-  )
-}
-
-
-
 //<Gradient scale={[5]} position={[0, 10, -200]}  />
 export default function MainScene() {
   
-
   return (
       <Page >
-        <Canvas dpr={[1,2]} resize={1} orthographic camera={{fov:35, zoom: 11 }}  > 
+        <Canvas  dpr={[1,2]} resize={1} orthographic camera={{zoom:11, position: [0,100,100], fov:30}}  > 
             <Suspense fallback={<Loader />}>
-              <OrbitControls />   
-              <Stage  adjustCamera intensity={0.3} environment="city"  >
-                <Float floatingRange={0.5}>
-                  <Character position={[-25, 2, 10]}  />
-                </Float>                       
+              <OrbitControls  
+                target={[0,0,0]} 
+                enableRotate={false} 
+                enableZoom={false} 
+                enablePan={false} 
+                enableDamping={false}
+                />   
+              <Stage receiveShadow={false} intensity={0.3} environment="city"  >
+                <Character position={[-22, 7, 20]}  />
+                <Gradient  attach="background" />                   
                 <Letters />
-                <Suelo />
-                <Smoke scale={0.25}  position={[-23, -5, 7]} />
+                <Smoke scale={0.3}  position={[-23, -5, 15]} rotation-y={[Math.PI/4]} />
                 </Stage>
             </Suspense>
           </Canvas>

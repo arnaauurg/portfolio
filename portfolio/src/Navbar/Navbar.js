@@ -1,6 +1,6 @@
 import React from 'react';
 import Icono from './Icon';
-import {Nav, Burger, NavLink, NavMenu} from './Components';
+import {Nav,  NavLink, NavMenu} from './Components';
 import {Spin as Hamburger, Spin} from 'hamburger-react';
 import { Breakpoint } from 'react-socks';
 
@@ -10,8 +10,7 @@ export default function Navbar() {
         <>
             <Nav>
                 <NavLink to="/" >
-                    <Icono></Icono>
-                    Arnau's Web
+                    ARNAU
                 </NavLink>
                 <Breakpoint small down>
                     <NavLink to="/menu">
@@ -27,16 +26,13 @@ export default function Navbar() {
                 </Breakpoint>
                 <NavMenu>
                     <NavLink to="/" activeStyle>
-                        Home
+                        HOME
                     </NavLink>
                     <NavLink to="/about" activeStyle>
-                        About Me
-                    </NavLink>
-                    <NavLink to="/interests" activeStyle>
-                        My Interests
+                        ABOUT ME
                     </NavLink>
                     <NavLink to="/contact-me" activeStyle>
-                        Contact Me
+                        CONTACT
                     </NavLink>
                 </NavMenu>
             </Nav>

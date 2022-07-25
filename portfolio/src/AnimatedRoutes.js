@@ -4,7 +4,6 @@ import {AnimatePresence } from "framer-motion/dist/framer-motion";
 
 import Navbar from './Navbar/Navbar';
 import MainScene from './Home/Scene';
-import Interests from './Interests/MyIntersets';
 import AboutMe from './About/AboutMe';
 import Contact from './Contact Me/Contact';
 
@@ -19,7 +18,6 @@ function AnimatedRoutes() {
         <Route path="/"        element={<MainScene/>} />
         <Route path="/home"        element={<MainScene/>} />
         <Route path="/about"     element={<AboutMe/>}   />
-        <Route path="/interests" element={<Interests/>} />
         <Route path="/contact-me"   element={<Contact/>}   />
       </Routes>
     </AnimatePresence>

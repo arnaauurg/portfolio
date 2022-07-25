@@ -50,7 +50,7 @@ export default function Fragments({ visible, ...props }) {
     materials['PurpleOut'] = new THREE.MeshStandardMaterial({
       color: new THREE.Color(0x93017a),
       transparent: false,
-      emissive: '0x93017a',
+      emissive: 0x93017a,
       roughness: 1
     })
     materials['YellowIn'] = new THREE.MeshPhysicalMaterial({
@@ -85,6 +85,7 @@ export default function Fragments({ visible, ...props }) {
   }, [])
 
   useEffect(() => {
+    //animación exa con Blender cell frcture
     if (visible === true){
         actions.Destroy.repetitions = 0
         actions.Destroy.clampWhenFinished = true
@@ -105,14 +106,14 @@ export default function Fragments({ visible, ...props }) {
       >
         <mesh
           name="Shape_1_cell045"
-          castShadow
+          
           receiveShadow
           geometry={nodes.Shape_1_cell045.geometry}
           material={materials.GreenOut} /* fragmento segunda A */
         />
         <mesh
           name="Shape_1_cell045_1"
-          castShadow
+          
           receiveShadow
           geometry={nodes.Shape_1_cell045_1.geometry}
           material={materials.GreenIn}
@@ -124,14 +125,14 @@ export default function Fragments({ visible, ...props }) {
       >
         <mesh
           name="Shape_1_cell046"
-          castShadow
+          
           receiveShadow
           geometry={nodes.Shape_1_cell046.geometry}
           material={materials.GreenOut} /* fragmento segunda A */
         />
         <mesh
           name="Shape_1_cell046_1"
-          castShadow
+          
           receiveShadow
           geometry={nodes.Shape_1_cell046_1.geometry}
           material={materials.GreenIn}
@@ -143,14 +144,14 @@ export default function Fragments({ visible, ...props }) {
       >
         <mesh
           name="Shape_1_cell031_1"
-          castShadow
+          
           receiveShadow
           geometry={nodes.Shape_1_cell031_1.geometry}
           material={materials.PurpleOut} /* fragemento primera a*/
         />
         <mesh
           name="Shape_1_cell031_2"
-          castShadow
+          
           receiveShadow
           geometry={nodes.Shape_1_cell031_2.geometry}
           material={materials.PurpleIn} /* fragemento primera a*/
@@ -162,14 +163,14 @@ export default function Fragments({ visible, ...props }) {
       >
         <mesh
           name="Shape_1_cell032"
-          castShadow
+          
           receiveShadow
           geometry={nodes.Shape_1_cell032.geometry}
           material={materials.PurpleOut} /* fragemento primera a*/
         />
         <mesh
           name="Shape_1_cell032_1"
-          castShadow
+          
           receiveShadow
           geometry={nodes.Shape_1_cell032_1.geometry}
           material={materials.PurpleIn} /* fragemento primera a*/
@@ -181,14 +182,14 @@ export default function Fragments({ visible, ...props }) {
       >
         <mesh
           name="Shape_1_cell033_1"
-          castShadow
+          
           receiveShadow
           geometry={nodes.Shape_1_cell033_1.geometry}
           material={materials.GreenOut} /* fragemento segunda a*/
         />
         <mesh
           name="Shape_1_cell033_2"
-          castShadow
+          
           receiveShadow
           geometry={nodes.Shape_1_cell033_2.geometry}
           material={materials.GreenIn}
@@ -200,14 +201,13 @@ export default function Fragments({ visible, ...props }) {
       >
         <mesh
           name="Shape_1_cell034"
-          castShadow
+          
           receiveShadow
           geometry={nodes.Shape_1_cell034.geometry}
           material={materials.OrangeOut} /*fragmento de r*/
         />
         <mesh
           name="Shape_1_cell034_1"
-          castShadow
           receiveShadow
           geometry={nodes.Shape_1_cell034_1.geometry}
           material={materials.OrangeIn} /*fragmento de r*/
@@ -219,14 +219,13 @@ export default function Fragments({ visible, ...props }) {
       >
         <mesh
           name="Shape_1_cell035"
-          castShadow
           receiveShadow
           geometry={nodes.Shape_1_cell035.geometry}
           material={materials.OrangeOut}
         />
         <mesh
           name="Shape_1_cell035_1"
-          castShadow
+          
           receiveShadow
           geometry={nodes.Shape_1_cell035_1.geometry}
           material={materials.OrangeIn} /*fragmento de r*/
@@ -238,14 +237,14 @@ export default function Fragments({ visible, ...props }) {
       >
         <mesh
           name="Shape_1_cell036"
-          castShadow
+          
           receiveShadow
           geometry={nodes.Shape_1_cell036.geometry}
           material={materials.PurpleOut} /*fragmento de ??*/
         />
         <mesh
           name="Shape_1_cell036_1"
-          castShadow
+          
           receiveShadow
           geometry={nodes.Shape_1_cell036_1.geometry}
           material={materials["Material.004"]}
@@ -257,14 +256,14 @@ export default function Fragments({ visible, ...props }) {
       >
         <mesh
           name="Shape_1_cell037"
-          castShadow
+          
           receiveShadow
           geometry={nodes.Shape_1_cell037.geometry}
           material={materials.GreenOut} /* fragmento segunda a*/
         />
         <mesh
           name="Shape_1_cell037_1"
-          castShadow
+          
           receiveShadow
           geometry={nodes.Shape_1_cell037_1.geometry}
           material={materials.GreenIn}
@@ -276,14 +275,14 @@ export default function Fragments({ visible, ...props }) {
       >
         <mesh
           name="Shape_1_cell038"
-          castShadow
+          
           receiveShadow
           geometry={nodes.Shape_1_cell038.geometry}
           material={materials.Material} /* fragmento de U */
         />
         <mesh
           name="Shape_1_cell038_1"
-          castShadow
+          
           receiveShadow
           geometry={nodes.Shape_1_cell038_1.geometry}
           material={materials["Material.004"]}
@@ -295,14 +294,14 @@ export default function Fragments({ visible, ...props }) {
       >
         <mesh
           name="Shape_1_cell039"
-          castShadow
+          
           receiveShadow
           geometry={nodes.Shape_1_cell039.geometry}
           material={materials.Material} /* fragmento de U */
         />
         <mesh
           name="Shape_1_cell039_1"
-          castShadow
+          
           receiveShadow
           geometry={nodes.Shape_1_cell039_1.geometry}
           material={materials["Material.004"]}
@@ -314,14 +313,14 @@ export default function Fragments({ visible, ...props }) {
       >
         <mesh
           name="Shape_1_cell040"
-          castShadow
+          
           receiveShadow
           geometry={nodes.Shape_1_cell040.geometry}
           material={materials.GreenOut} /* fragmento segunda A */
         />
         <mesh
           name="Shape_1_cell040_1"
-          castShadow
+          
           receiveShadow
           geometry={nodes.Shape_1_cell040_1.geometry}
           material={materials.GreenIn}
@@ -333,14 +332,14 @@ export default function Fragments({ visible, ...props }) {
       >
         <mesh
           name="Shape_1_cell041"
-          castShadow
+          
           receiveShadow
           geometry={nodes.Shape_1_cell041.geometry}
           material={materials.GreenOut} /* fragmento segunda A */
         />
         <mesh
           name="Shape_1_cell041_1"
-          castShadow
+          
           receiveShadow
           geometry={nodes.Shape_1_cell041_1.geometry}
           material={materials.GreenIn}
@@ -352,14 +351,13 @@ export default function Fragments({ visible, ...props }) {
       >
         <mesh
           name="Shape_1_cell042"
-          castShadow
           receiveShadow
           geometry={nodes.Shape_1_cell042.geometry}
           material={materials.YellowOut} /* Fragmento de N */
         />
         <mesh
           name="Shape_1_cell042_1"
-          castShadow
+          
           receiveShadow
           geometry={nodes.Shape_1_cell042_1.geometry}
           material={materials.YellowIn}
@@ -371,14 +369,14 @@ export default function Fragments({ visible, ...props }) {
       >
         <mesh
           name="Shape_1_cell043"
-          castShadow
+          
           receiveShadow
           geometry={nodes.Shape_1_cell043.geometry}
           material={materials.Material} /* fragmento de U */
         />
         <mesh
           name="Shape_1_cell043_1"
-          castShadow
+          
           receiveShadow
           geometry={nodes.Shape_1_cell043_1.geometry}
           material={materials["Material.004"]}
@@ -390,14 +388,14 @@ export default function Fragments({ visible, ...props }) {
       >
         <mesh
           name="Shape_1_cell044"
-          castShadow
+          
           receiveShadow
           geometry={nodes.Shape_1_cell044.geometry}
           material={materials.YellowOut} /* Fragmento de N (cuerpo rigido activo de friccion 1) */
         />
         <mesh
           name="Shape_1_cell044_1"
-          castShadow
+          
           receiveShadow
           geometry={nodes.Shape_1_cell044_1.geometry}
           material={materials.YellowIn}
@@ -409,14 +407,14 @@ export default function Fragments({ visible, ...props }) {
       >
         <mesh
           name="Shape_1_cell047"
-          castShadow
+          
           receiveShadow
           geometry={nodes.Shape_1_cell047.geometry}
           material={materials.GreenOut} /* fragmento de A enanismo detrás */
         />
         <mesh
           name="Shape_1_cell047_1"
-          castShadow
+          
           receiveShadow
           geometry={nodes.Shape_1_cell047_1.geometry}
           material={materials.GreenIn}
@@ -428,14 +426,14 @@ export default function Fragments({ visible, ...props }) {
       >
         <mesh
           name="Shape_1_cell048"
-          castShadow
+          
           receiveShadow
           geometry={nodes.Shape_1_cell048.geometry}
           material={materials.YellowOut} /* fragmento de N */
         />
         <mesh
           name="Shape_1_cell048_1"
-          castShadow
+          
           receiveShadow
           geometry={nodes.Shape_1_cell048_1.geometry}
           material={materials.YellowIn}
@@ -447,14 +445,14 @@ export default function Fragments({ visible, ...props }) {
       >
         <mesh
           name="Shape_1_cell049"
-          castShadow
+          
           receiveShadow
           geometry={nodes.Shape_1_cell049.geometry}
           material={materials.YellowOut} /* fragmento de N */
         />
         <mesh
           name="Shape_1_cell049_1"
-          castShadow
+          
           receiveShadow
           geometry={nodes.Shape_1_cell049_1.geometry}
           material={materials.YellowIn}
@@ -466,14 +464,14 @@ export default function Fragments({ visible, ...props }) {
       >
         <mesh
           name="Shape_1_cell050"
-          castShadow
+          
           receiveShadow
           geometry={nodes.Shape_1_cell050.geometry}
           material={materials.OrangeOut} /*fragmento de r*/
         />
         <mesh
           name="Shape_1_cell050_1"
-          castShadow
+          
           receiveShadow
           geometry={nodes.Shape_1_cell050_1.geometry}
           material={materials.OrangeIn} /*fragmento de r*/
@@ -485,14 +483,14 @@ export default function Fragments({ visible, ...props }) {
       >
         <mesh
           name="Shape_1_cell051"
-          castShadow
+          
           receiveShadow
           geometry={nodes.Shape_1_cell051.geometry}
           material={materials.YellowOut} /* frgamento de N */
         />
         <mesh
           name="Shape_1_cell051_1"
-          castShadow
+          
           receiveShadow
           geometry={nodes.Shape_1_cell051_1.geometry}
           material={materials.YellowIn}
@@ -504,14 +502,14 @@ export default function Fragments({ visible, ...props }) {
       >
         <mesh
           name="Shape_1_cell052"
-          castShadow
+          
           receiveShadow
           geometry={nodes.Shape_1_cell052.geometry}
           material={materials.OrangeOut} /*fragmento de r*/
         />
         <mesh
           name="Shape_1_cell052_1"
-          castShadow
+          
           receiveShadow
           geometry={nodes.Shape_1_cell052_1.geometry}
           material={materials.OrangeIn} /*fragmento de r*/
@@ -523,14 +521,14 @@ export default function Fragments({ visible, ...props }) {
       >
         <mesh
           name="Shape_1_cell053"
-          castShadow
+          
           receiveShadow
           geometry={nodes.Shape_1_cell053.geometry}
           material={materials.Material} /* fragmento de U */
         />
         <mesh
           name="Shape_1_cell053_1"
-          castShadow
+          
           receiveShadow
           geometry={nodes.Shape_1_cell053_1.geometry}
           material={materials["Material.004"]}
@@ -542,14 +540,14 @@ export default function Fragments({ visible, ...props }) {
       >
         <mesh
           name="Shape_1_cell054"
-          castShadow
+          
           receiveShadow
           geometry={nodes.Shape_1_cell054.geometry}
           material={materials.PurpleOut} /* fragmento de primera A */
         />
         <mesh
           name="Shape_1_cell054_1"
-          castShadow
+          
           receiveShadow
           geometry={nodes.Shape_1_cell054_1.geometry}
           material={materials.PurpleIn}
@@ -561,14 +559,14 @@ export default function Fragments({ visible, ...props }) {
       >
         <mesh
           name="Shape_1_cell055"
-          castShadow
+          
           receiveShadow
           geometry={nodes.Shape_1_cell055.geometry}
           material={materials.OrangeOut} /*fragmento de r*/
         />
         <mesh
           name="Shape_1_cell055_1"
-          castShadow
+          
           receiveShadow
           geometry={nodes.Shape_1_cell055_1.geometry}
           material={materials.OrangeIn} /*fragmento de r*/
@@ -580,14 +578,14 @@ export default function Fragments({ visible, ...props }) {
       >
         <mesh
           name="Shape_1_cell056"
-          castShadow
+          
           receiveShadow
           geometry={nodes.Shape_1_cell056.geometry}
           material={materials.YellowOut} /* fragmento de N */
         />
         <mesh
           name="Shape_1_cell056_1"
-          castShadow
+          
           receiveShadow
           geometry={nodes.Shape_1_cell056_1.geometry}
           material={materials.YellowIn}
@@ -599,14 +597,14 @@ export default function Fragments({ visible, ...props }) {
       >
         <mesh
           name="Shape_1_cell057"
-          castShadow
+          
           receiveShadow
           geometry={nodes.Shape_1_cell057.geometry}
           material={materials.PurpleOut} /* fragmento de A */ 
         />
         <mesh
           name="Shape_1_cell057_1"
-          castShadow
+          
           receiveShadow
           geometry={nodes.Shape_1_cell057_1.geometry}
           material={materials.PurpleIn}
@@ -618,14 +616,14 @@ export default function Fragments({ visible, ...props }) {
       >
         <mesh
           name="Shape_1_cell058"
-          castShadow
+          
           receiveShadow
           geometry={nodes.Shape_1_cell058.geometry}
           material={materials.YellowOut} /* fragmento de N */
         />
         <mesh
           name="Shape_1_cell058_1"
-          castShadow
+          
           receiveShadow
           geometry={nodes.Shape_1_cell058_1.geometry}
           material={materials.YellowIn}
@@ -637,14 +635,14 @@ export default function Fragments({ visible, ...props }) {
       >
         <mesh
           name="Shape_1_cell059"
-          castShadow
+          
           receiveShadow
           geometry={nodes.Shape_1_cell059.geometry}
           material={materials.OrangeOut} /*fragmento de r*/
         />
         <mesh
           name="Shape_1_cell059_1"
-          castShadow
+          
           receiveShadow
           geometry={nodes.Shape_1_cell059_1.geometry}
           material={materials.OrangeIn} /*fragmento de r*/
@@ -656,14 +654,14 @@ export default function Fragments({ visible, ...props }) {
       >
         <mesh
           name="Shape_1_cell060"
-          castShadow
+          
           receiveShadow
           geometry={nodes.Shape_1_cell060.geometry}
           material={materials.Material} /* fragment de la U */
         />
         <mesh
           name="Shape_1_cell060_1"
-          castShadow
+          
           receiveShadow
           geometry={nodes.Shape_1_cell060_1.geometry}
           material={materials["Material.004"]}
@@ -675,14 +673,14 @@ export default function Fragments({ visible, ...props }) {
       >
         <mesh
           name="Shape_1_cell061"
-          castShadow
+          
           receiveShadow
           geometry={nodes.Shape_1_cell061.geometry}
           material={materials.YellowOut} /* fragmento de N */
         />
         <mesh
           name="Shape_1_cell061_1"
-          castShadow
+          
           receiveShadow
           geometry={nodes.Shape_1_cell061_1.geometry}
           material={materials.OrangeIn} /*fragmento de r*/
@@ -694,14 +692,14 @@ export default function Fragments({ visible, ...props }) {
       >
         <mesh
           name="Shape_1_cell062"
-          castShadow
+          
           receiveShadow
           geometry={nodes.Shape_1_cell062.geometry}
           material={materials.YellowOut} /* fragmento de N */
         />
         <mesh
           name="Shape_1_cell062_1"
-          castShadow
+          
           receiveShadow
           geometry={nodes.Shape_1_cell062_1.geometry}
           material={materials.YellowIn}
@@ -710,14 +708,14 @@ export default function Fragments({ visible, ...props }) {
       <group name="Destroy" position={[33.20074844, 70.46547699, 7.51825762]}>
         <mesh
           name="Shape_1_cell063"
-          castShadow
+          
           receiveShadow
           geometry={nodes.Shape_1_cell063.geometry}
           material={materials.Material}
         />
         <mesh
           name="Shape_1_cell063_1"
-          castShadow
+          
           receiveShadow
           geometry={nodes.Shape_1_cell063_1.geometry}
           material={materials["Material.004"]}
@@ -729,14 +727,14 @@ export default function Fragments({ visible, ...props }) {
       >
         <mesh
           name="Shape_1_cell064"
-          castShadow
+          
           receiveShadow
           geometry={nodes.Shape_1_cell064.geometry}
           material={materials.OrangeOut}
         />
         <mesh
           name="Shape_1_cell064_1"
-          castShadow
+          
           receiveShadow
           geometry={nodes.Shape_1_cell064_1.geometry}
           material={materials.OrangeIn}  /* fragmento interno de R*/
@@ -748,14 +746,12 @@ export default function Fragments({ visible, ...props }) {
       >
         <mesh
           name="Shape_1_cell065"
-          castShadow
           receiveShadow
           geometry={nodes.Shape_1_cell065.geometry}
           material={materials.Material}
         />
         <mesh
           name="Shape_1_cell065_1"
-          castShadow
           receiveShadow
           geometry={nodes.Shape_1_cell065_1.geometry}
           material={materials["Material.004"]}

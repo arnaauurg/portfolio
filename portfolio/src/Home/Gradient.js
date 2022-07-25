@@ -5,10 +5,10 @@ import {GradientTexture} from '@react-three/drei'
 export default function Gradient (){
 
     return(
-        <mesh scale={25}  >
-            <planeBufferGeometry  args={[8, 8, 32, 32]} />
+        <mesh scale={[25,10,10]}  >
+            <planeBufferGeometry  args={[16, 8, 32, 32]}  />
             <meshPhysicalMaterial>
-                <GradientTexture stops={[0.3, 0.6]} colors={['#85FFBD','#FFFB7D']} size={1000}  />
+                <GradientTexture stops={[0, 1]} colors={['#85FFBD','#FFFB7D']} size={1024}  />
             </meshPhysicalMaterial>
         </mesh>
     )
