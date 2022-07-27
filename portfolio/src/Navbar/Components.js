@@ -20,13 +20,22 @@ export const NavLink= styled(Link)`
     padding: 0 1.2rem;
     height: 100%;
     cursor: pointer;
+    text-transform: uppercase;
     text-decoration: none;
     font-family: 'Anton', sans-serif;
     font-weight: 200,
     font-size: 1vw;
     letter-spacing: 0.1em;
     color: #000000;
+    &:hover{
+        background-color: #488746;
+    }
+
 `
+/*  
+    No me convence el efecto hovered. Styled-Components entra en conflicto
+    con las pseudoclases de CSS ::before & :after
+*/
 
 export const NavMenu = styled.div`
     display: flex;

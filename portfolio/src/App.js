@@ -7,8 +7,7 @@ import ReactDOM from 'react-dom/client';
 
 import Navbar from './Navbar/Navbar';
 import AnimatedRoutes from './AnimatedRoutes';
-import MainScene from './Home/Scene';
-import Interests from './Interests/MyIntersets';
+import MainScene from './Home/Home';
 import AboutMe from './About/AboutMe';
 import Contact from './Contact Me/Contact';
 

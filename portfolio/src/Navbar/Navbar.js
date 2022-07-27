@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Icono from './Icon';
 import {Nav,  NavLink, NavMenu} from './Components';
 import {Spin as Hamburger, Spin} from 'hamburger-react';
@@ -6,11 +6,12 @@ import { Breakpoint } from 'react-socks';
 
 
 export default function Navbar() {
+
     return (
         <>
             <Nav>
                 <NavLink to="/" >
-                    ARNAU
+                    MyLOGO
                 </NavLink>
                 <Breakpoint small down>
                     <NavLink to="/menu">
@@ -18,20 +19,20 @@ export default function Navbar() {
                             rounded 
                             size= {40}
                             distance='md'
-                            color="#ffffff"
+                            color="#000000"
                             direction='left'
                             position="right" 
                         />
                     </NavLink>
                 </Breakpoint>
                 <NavMenu>
-                    <NavLink to="/" activeStyle>
+                    <NavLink to="/" activeStyle >
                         HOME
                     </NavLink>
-                    <NavLink to="/about" activeStyle>
+                    <NavLink to="/about" activeStyle >
                         ABOUT ME
                     </NavLink>
-                    <NavLink to="/contact-me" activeStyle>
+                    <NavLink to="/contact-me" activeStyle >
                         CONTACT
                     </NavLink>
                 </NavMenu>

@@ -2,7 +2,7 @@
 import React from 'react';
 import { Suspense, useState} from 'react'
 import {Canvas, useFrame, useThree} from '@react-three/fiber'
-import {Float, OrbitControls, Stage, MeshReflectorMaterial, Plane } from '@react-three/drei';
+import { OrbitControls, Stage, ScrollControls, Scroll } from '@react-three/drei';
 
 import Loader from '../Loader';
 import Page from '../Page';
@@ -22,7 +22,7 @@ function Letters(){
       <Fragments 
         visible={click}  
         onClick={() => setClicked(true)}
-        /* falta poner el hover de interacción- on pointer in-out */ 
+        /* falta poner el hover de interacción- on pointer in||out */ 
         />  
     </group>
   )
@@ -30,7 +30,7 @@ function Letters(){
 
 
 //<Gradient scale={[5]} position={[0, 10, -200]}  />
-export default function MainScene() {
+export default function Scene() {
   
   return (
       <Page >
@@ -43,14 +43,14 @@ export default function MainScene() {
                 enablePan={false} 
                 enableDamping={false}
                 />   
-              <Stage receiveShadow={false} intensity={0.3} environment="city"  >
-                <Character position={[-22, 7, 20]}  />
-                <Gradient  attach="background" />                   
-                <Letters />
-                <Smoke scale={0.3}  position={[-23, -5, 15]} rotation-y={[Math.PI/4]} />
-                </Stage>
+                <Stage receiveShadow={false} intensity={0.3} environment="city"  >
+                  <Character position={[-22, 7, 20]}  />
+                  <Gradient  attach="background" />                   
+                  <Letters />
+                  <Smoke scale={0.3}  position={[-23, -5, 15]} rotation-y={[Math.PI/4]} />
+                  </Stage>
             </Suspense>
-          </Canvas>
+        </Canvas>
       </Page>
   );
 }

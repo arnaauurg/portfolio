@@ -1,11 +1,14 @@
-import React from 'react'
+import React, {lazy} from 'react'
 import {Route, Routes, useLocation} from 'react-router-dom';
 import {AnimatePresence } from "framer-motion/dist/framer-motion";
 
 import Navbar from './Navbar/Navbar';
-import MainScene from './Home/Scene';
 import AboutMe from './About/AboutMe';
 import Contact from './Contact Me/Contact';
+
+
+/* para debugear load screen*/
+const Scene = lazy(() => import('./Home/Scene'))
 
 
 function AnimatedRoutes() {
@@ -15,8 +18,8 @@ function AnimatedRoutes() {
   return (
     <AnimatePresence >
       <Routes key={location.pathname} location={location}>
-        <Route path="/"        element={<MainScene/>} />
-        <Route path="/home"        element={<MainScene/>} />
+        <Route path="/"        element={<Scene/>} />
+        <Route path="/home"        element={<Scene />} />
         <Route path="/about"     element={<AboutMe/>}   />
         <Route path="/contact-me"   element={<Contact/>}   />
       </Routes>

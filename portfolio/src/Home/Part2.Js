@@ -3,15 +3,11 @@ import React from 'react';
 import {Canvas} from '@react-three/fiber'
 
 
-
-import React from 'react'
-
-function Scene2() {
+export default function Part2() {
   return (
     <Canvas>
-        <div>Scene2</div>
+        <div>Future Scene 2</div>
     </Canvas>
   )
 }
 
-export default Scene2
