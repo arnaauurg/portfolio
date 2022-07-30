@@ -11,7 +11,7 @@ import {Html,GradientTexture} from '@react-three/drei';
     Instagram
     Telegram
     Mail/Gmail
-  Iconos 3d de Redes sociales (animación con cannon physics?)
+  Iconos 3d de Redes sociales 
 */
 
 function Gradient (){

@@ -85,7 +85,7 @@ export default function Fragments({ visible, ...props }) {
   }, [])
 
   useEffect(() => {
-    //animación exa con Blender cell frcture
+    //animación con Blender cell frcture
     if (visible === true){
         actions.Destroy.repetitions = 0
         actions.Destroy.clampWhenFinished = true

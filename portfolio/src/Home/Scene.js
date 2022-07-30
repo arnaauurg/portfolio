@@ -45,7 +45,7 @@ export default function Scene() {
                 />   
                 <Stage receiveShadow={false} intensity={0.3} environment="city"  >
                   <Character position={[-22, 7, 20]}  />
-                  <Gradient  attach="background" />                   
+                  <Gradient  />                   
                   <Letters />
                   <Smoke scale={0.3}  position={[-23, -5, 15]} rotation-y={[Math.PI/4]} />
                   </Stage>

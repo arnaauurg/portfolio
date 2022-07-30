@@ -4,7 +4,7 @@ import { useGLTF } from "@react-three/drei";
 export default function Character({ ...props }) {
   const group = useRef();
   const { nodes, materials } = useGLTF("/character.glb");
-  //modelo de sketch
+  //modelo de sketchfab ?? not working properly
   return (
     <group ref={group} {...props} dispose={null}>
       <group rotation={[-Math.PI / 2, 0, 0]} scale={1.53389943}>

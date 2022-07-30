@@ -10,9 +10,11 @@ export const Nav = styled.nav`
     justify-content: space-between;
     padding: 0.5rem calc(100vw-1000px)/2;
     z-index: 10;
-    background: rgb(166, 214, 182);
-    background: linear-gradient(5deg, rgb(166, 214, 182) 0%, rgb(166, 214, 182) 100%);
+    background: transparent;
 `
+
+/*background: rgb(166, 214, 182);
+background: linear-gradient(5deg, rgb(166, 214, 182) 0%, rgb(166, 214, 182) 100%) */
 export const NavLink= styled(Link)`
     color: #fff;
     display: flex;
