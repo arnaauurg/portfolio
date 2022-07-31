@@ -2,8 +2,8 @@ import { Physics, usePlane, useBox, RigidBody } from '@react-three/cannon'
 
 import React, { useEffect, useState } from 'react'
 import {Canvas, useThree} from '@react-three/fiber'
-import LanguageC from './IconC';
-import IconHTML from './IconHTML'
+import LanguageC from './Icons/IconC'
+import IconHTML from './Icons/IconHTML'
 
 function Plane ({position}) {
   const [ref] = usePlane(() => ({rotation:[-Math.PI / 2, 0, 0], ...position }))

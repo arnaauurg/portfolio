@@ -6,7 +6,8 @@ import Icon from './Navbar/Icon';
 
 
 const LoadingStyles = styled.div`
-  display: flex;
+  position: static;
+  display: block;
   text-align: center;
   align-items: center;
   width: 100%;
@@ -14,7 +15,7 @@ const LoadingStyles = styled.div`
   margin: 0;
   padding: 0;
   top: 0;
-  z-index: 25;
+  z-index: 100;
   background: rgb(166, 214, 182);
   background: linear-gradient(5deg, rgb(166, 214, 182) 0%, rgb(166, 214, 182) 100%);
 `
@@ -29,9 +30,8 @@ const LoaderBox = styled.div`
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  font-family: 'Anton', sans-serif;
-  font-size: 0.8vw;
-  letter-spacing: 0.1em;
+  font-family: "Aquire-Bold";
+  font-size: 2vw;
   color: #001C12;
 `
 
@@ -72,9 +72,9 @@ function Loader() {
   const props = useRef();
   
   return (
-    <Html fullscreen={1} >
+    <Html fullscreen={1}>
         <LoadingStyles>
-          <LoaderBox> Loading  {progress.toFixed(2)}%</LoaderBox>
+          <LoaderBox>Loading {progress.toFixed(2)}%</LoaderBox>
         </LoadingStyles>
     </Html>
 

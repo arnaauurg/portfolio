@@ -8,14 +8,7 @@ export const Presentation = styled.div`
     margin: 10%;  
     background-color: transparent;
 `
-export const blink = keyframes`
-    from{
-        border-right-color: black;
-    }
-    to{
-        border-right-color: transparent;
-    }
-`;
+
 
 export const Title = styled.p`
     padding-top: 5%;
@@ -24,7 +17,6 @@ export const Title = styled.p`
     text-align: center;
     font-family: 'Anton', sans-serif;
     font-size: 5vw;
-    animation: ${blink} 1s linear infinite;
 `;
 
 

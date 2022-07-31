@@ -45,7 +45,7 @@ function AboutMe() {
         Vel fringilla est ullamco</Text>
       </Presentation>
     <Canvas 
-      dpr={[1,2]} resize={1} colorManagement gl={{alpha: false }} camera={{ position: [0, 0, 10], fov: 50 }}
+      dpr={[1,2]} resize={1} gl={{alpha: false }} camera={{ position: [0, 0, 10], fov: 50 }}
       onCreated={(state) => state.events.connect(scrollRef.current)}
       raycaster={{ computeOffsets: ({ clientX, clientY }) => ({ offsetX: clientX, offsetY: clientY }) }}
       >

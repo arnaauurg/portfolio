@@ -11,6 +11,8 @@ import {Html,GradientTexture} from '@react-three/drei';
     Instagram
     Telegram
     Mail/Gmail
+
+    +++ send email -> outlook.es
   Iconos 3d de Redes sociales 
 */
 

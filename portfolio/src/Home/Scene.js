@@ -28,22 +28,22 @@ function Letters(){
   )
 }
 
-
+//* Blop spheres interactivas? */
 //<Gradient scale={[5]} position={[0, 10, -200]}  />
 export default function Scene() {
   
   return (
       <Page >
-        <Canvas  dpr={[1,2]} resize={1} orthographic camera={{zoom:11, position: [0,100,100], fov:30}}  > 
+        <Canvas  dpr={[1,2]} resize={1} orthographic camera={{zoom:11.1, position: [0,100,100], fov:40}}  > 
             <Suspense fallback={<Loader />}>
               <OrbitControls  
-                target={[0,0,0]} 
+                target={[0,4,0]} 
                 enableRotate={false} 
                 enableZoom={false} 
                 enablePan={false} 
                 enableDamping={false}
                 />   
-                <Stage receiveShadow={false} intensity={0.3} environment="city"  >
+                <Stage receiveShadow intensity={0.3} environment="city"  >
                   <Character position={[-22, 7, 20]}  />
                   <Gradient  />                   
                   <Letters />
