@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import {NavLink} from "react-router-dom";
-
+import img from './NavMobile.svg';
 
 
 export const Nav = styled.nav`
@@ -20,7 +20,7 @@ export const NavBarLink= styled(NavLink)`
     color: #fff;
     display: flex;
     align-items: center;
-    padding: 0 1.4rem;
+    padding: 0 2rem;
     height: 100%;
     cursor: pointer;
     text-decoration: none;
@@ -64,7 +64,8 @@ export const BurgerStyles = styled.i`
 
 export const MobileNav = styled.nav`
   display: flex;
-  background-color: red;
+  background-image: url(${img});
+  background-size: cover;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -74,17 +75,11 @@ export const MobileNav = styled.nav`
   padding: 4rem 0.5rem;
   gap: 2rem;
   text-align: center;
-  font-size: 1.3rem;
-  font-weight: bold;
+  font-size: 2rem;
   transform: ${({ open }) => (open ? "translateX(0%);" : "translateX(-100%);")};
   transition: transform 150ms ease-in;
   z-index: 15;
-  a:first-child {
-    text-decoration: none;
-  }
-  a {
-    color: black;
-  }
+  
   @media (min-width: 768px) {
     display: none;
   }
@@ -93,15 +88,12 @@ export const MobileNav = styled.nav`
 export const MobileLink= styled(NavLink)`
     display: flex;
     justify-content: center;
+    text-decoration: none;
     align-items: center;
     height: 100%;
-    padding: 0.5rem 2rem;
     cursor: pointer;
-    text-transform: uppercase;
-    text-decoration: none;
     font-family: "Aquire-Bold";
-    font-weight: 200,
-    font-size: 1vw;
-    letter-spacing: 0.1em;
+    color: #D6FFE9;
+    font-size: 25px 6vw;
     z-index: 15;
 `

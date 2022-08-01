@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Suspense, useState} from 'react'
-import {Canvas, useFrame, useThree} from '@react-three/fiber'
+import {Canvas} from '@react-three/fiber'
 import { OrbitControls, Stage, ScrollControls, Scroll } from '@react-three/drei';
 
 import Loader from '../Loader';
@@ -29,12 +29,24 @@ function Letters(){
 }
 
 //* Blop spheres interactivas? */
-//<Gradient scale={[5]} position={[0, 10, -200]}  />
+
+/*  
+
+const loader = new THREE.TextureLoader();
+const bgTexture = loader.load('mybackground
+');
+scene.background = bgTexture;
+
+*/
+
+
+
 export default function Scene() {
   
+
   return (
       <Page >
-        <Canvas  dpr={[1,2]} resize={1} orthographic camera={{zoom:11.1, position: [0,100,100], fov:40}}  > 
+        <Canvas dpr={[1,2]} resize={1} orthographic camera={{zoom:11.1, position: [0,100,100], fov:40}}  > 
             <Suspense fallback={<Loader />}>
               <OrbitControls  
                 target={[0,4,0]} 
@@ -45,7 +57,7 @@ export default function Scene() {
                 />   
                 <Stage receiveShadow intensity={0.3} environment="city"  >
                   <Character position={[-22, 7, 20]}  />
-                  <Gradient  />                   
+                                    
                   <Letters />
                   <Smoke scale={0.3}  position={[-23, -5, 15]} rotation-y={[Math.PI/4]} />
                   </Stage>

@@ -8,7 +8,7 @@ export default function Gradient (){
         <mesh scale={[25,12,10]}  >
             <planeBufferGeometry  args={[16, 8, 32, 32]}  />
             <meshPhysicalMaterial>
-                <GradientTexture stops={[0, 1]} colors={['#85FFBD','#FFFB7D']} size={1024}  />
+                <GradientTexture stops={[0, 1]} colors={['#85FFBD','#FADE3E']} size={1024}  />
             </meshPhysicalMaterial>
         </mesh>
     )
