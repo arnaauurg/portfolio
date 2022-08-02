@@ -1,3 +1,4 @@
+import React from 'react'
 import styled, { keyframes } from "styled-components";
 
 
@@ -20,11 +21,7 @@ export const Title = styled.p`
 `;
 
 
-export const Pic = styled.img`
-    display: block;
-    width: 30%;
-    height: 30%;
-`
+
 export const Text = styled.p`
     margin: auto;
     color: black;

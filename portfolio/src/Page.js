@@ -14,6 +14,11 @@ function AnimatedRoutes() {
     leave:[
       styles applying for leaving elements
     ]
+
+    useEffect(() =>
+      
+    )
+
     return transitions
     ((props, item) =>
     (
@@ -24,6 +29,9 @@ function AnimatedRoutes() {
       </animated.div>
     ))
   })
+  última versión de React Router V6 entra en conflicto con react-spring 
+
+  ? motion?
 
 
  */

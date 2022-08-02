@@ -2,7 +2,7 @@ import React, { Suspense, useRef } from 'react'
 import Page from '../Page';
 import * as THREE from 'three';
 import {Presentation, blink, Text, Title} from './Components';
-import {Html, GradientTexture, ScrollControls, Scroll, OrbitControls} from '@react-three/drei';
+import {Html, Image, ScrollControls, Scroll, OrbitControls} from '@react-three/drei';
 import {Canvas, useFrame, useThree} from '@react-three/fiber'
 
 /*
@@ -37,6 +37,7 @@ function AboutMe() {
   return (
     <Page >
     <Title>/WHOAMI</Title>
+      <img src='./foto1.jpeg' />
       <Presentation>
         <Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
         Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
